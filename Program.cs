@@ -57,7 +57,7 @@ namespace HeartRateOnStream_OSC {
                     if (lastHeartrate != heartrate) {
                         lastHeartrate = heartrate;
 
-                        OscParameter.SendAvatarParameter("hr_percent", Remap(heartrate, 0, 200, -1, 1));
+                        OscParameter.SendAvatarParameter("hr_percent", Remap(heartrate, 0, 200, 0, 1));
                     }
                 }
                 else {
