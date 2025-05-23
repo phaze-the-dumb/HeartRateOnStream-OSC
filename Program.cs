@@ -45,7 +45,7 @@ namespace HeartRateOnStream_OSC {
                 }
 
                 if (Connected) {
-                    OscParameter.SendAvatarParameter("isHRConnected", true);
+                    OscParameter.SendAvatarParameter("hr_connected", true);
 
                     // Respond with a success message to client requests.
                     if (requestId != "") {
@@ -57,17 +57,11 @@ namespace HeartRateOnStream_OSC {
                     if (lastHeartrate != heartrate) {
                         lastHeartrate = heartrate;
 
-                        OscParameter.SendAvatarParameter("Heartrate", Remap(heartrate, 0, 255, -1, 1));
-                        OscParameter.SendAvatarParameter("Heartrate2", Remap(heartrate, 0, 255, 0, 1));
-                        OscParameter.SendAvatarParameter("Heartrate3", heartrate);
-
-                        OscParameter.SendAvatarParameter("HR", heartrate);
-                        OscParameter.SendAvatarParameter("isHRActive", true);
+                        OscParameter.SendAvatarParameter("hr_percent", Remap(heartrate, 0, 200, -1, 1));
                     }
                 }
                 else {
-                    OscParameter.SendAvatarParameter("isHRConnected", false);
-                    OscParameter.SendAvatarParameter("isHRActive", false);
+                    OscParameter.SendAvatarParameter("hr_connected", false);
                 }
 
                 Thread.Sleep(100);
