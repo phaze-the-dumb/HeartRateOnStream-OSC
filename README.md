@@ -1,3 +1,7 @@
+This fork allows to be used with [https://selees824.booth.pm/items/5531594](https://selees824.booth.pm/items/5531594)
+
+Also acts as a replacement for [https://github.com/kamyu1537/hr-osc](https://github.com/kamyu1537/hr-osc)
+
 # HeartRateOnStream-OSC
 HeartRateOnStream to VRChat OSC
 
